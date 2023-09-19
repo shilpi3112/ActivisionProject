@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Support Options" parallel="tests" thread-count='3' verbose="5">
+	<listeners>
+		<listener class-name="commonUtilities.TestCount" />
+		<listener class-name="commonUtilities.CompletedTestCount" />
+		<listener class-name="commonUtilities.TestNGCustomReportListener" />
+	</listeners>
+	<test name="SupportOptions_GameWarzone">
+		<parameter name="browser" value="${browser}"></parameter>
+		<classes>
+			<class name="testScripts.SupportOptionsRegression" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Online Services" parallel="tests" thread-count='3' verbose="5">
+	<listeners>
+		<listener class-name="commonUtilities.TestCount" />
+		<listener class-name="commonUtilities.CompletedTestCount" />
+		<listener class-name="commonUtilities.TestNGCustomReportListener" />
+		<listener class-name="commonUtilities.RetryListener" />
+	</listeners>
+	<test name="OnlineServices_AllValidations">
+		<parameter name="browser" value="${browser}"></parameter>
+		<classes>
+			<class name="testScripts.OnlineServices_AllValidations" />
+		</classes>
+	</test>
+	<test name="OnlineServices_PlatformStatus">
+		<parameter name="browser" value="${browser}"></parameter>
+		<classes>
+			<class name="testScripts.OnlineServices_PlatformStatus" />
+		</classes>
+	</test>
+</suite>

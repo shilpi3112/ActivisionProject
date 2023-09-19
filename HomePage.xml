@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Home Page" parallel="tests" thread-count='3' verbose="5">
+	<listeners>
+		<listener class-name="commonUtilities.TestCount" />
+			<listener class-name="commonUtilities.CompletedTestCount" />
+		<listener class-name="commonUtilities.TestNGCustomReportListener" />
+		<listener class-name="commonUtilities.RetryListener"/>   
+	</listeners>
+	<test name="HomePage_Games">
+		<parameter name="browser" value="${browser}"></parameter>
+		<classes>
+			<class name="testScripts.HomePage_Games" />
+		</classes>
+	</test>
+	<!--
+	<test name="HomePage_CarouselGamesAndCTA">
+		<parameter name="browser" value="${browser}"></parameter>
+		<classes>
+			<class name="testScripts.HomePage_CarouselGamesAndCTA" />
+		</classes>
+	</test>
+	 
+	<test name="HomePage_FooterLinks">
+		<parameter name="browser" value="${browser}"></parameter>
+		<classes>
+			<class name="testScripts.HomePageFooterLinks" />
+		</classes>
+	</test>
+	<test name="HomePage_HeaderLinks">
+		<parameter name="browser" value="${browser}"></parameter>
+		<classes>
+			<class name="testScripts.HomePageHeaderLinks" />
+		</classes>
+	</test>
+	<test name="HomePage_SearchMovingCarousel">
+		<parameter name="browser" value="${browser}"></parameter>
+		<classes>
+			<class name="testScripts.HomePageSearchMovingCarousel" />
+		</classes>
+	</test>
+	-->
+</suite>
